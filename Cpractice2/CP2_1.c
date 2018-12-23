@@ -6,8 +6,10 @@ int main()
 	ConvertType();
 	DoConvert();
 	CalOper();
-	CalcuLevel();*/
+	CalcuLevel();
 	SelfOper();
+	RelationOper();*/
+	LogicOperD();
 }
 
 int UseExpr()
@@ -154,6 +156,49 @@ int SelfOper()
 	printf("The iResultPreDel is: %d\n", iResultPreDel);
 	printf("The iNumber2 is: %d\n", iNumber2);
 	printf("The iResultLastDel is: %d\n", iResultLastDel);
+
+	system("pause");
+	return 0;
+}
+
+int RelationOper()
+{
+	int iChinese, iEnglish;
+	printf("Enter Chinese Score: ");
+	scanf_s("%d", &iChinese);
+	printf("Enter English Score: ");
+	scanf_s("%d", &iEnglish);
+
+	if (iChinese>iEnglish)
+	{
+		printf("Chinese is better than English!\n");		
+	}
+
+	if (iChinese<iEnglish)
+	{
+		printf("English is better than Chinese!\n");
+	}
+
+	if (iChinese==iEnglish)
+	{
+		printf("Chinese equals English!\n");	
+	}
+
+	system("pause");
+	return 0;
+}
+
+int LogicOperD()
+{
+	int iNumber1, iNumber2;
+	iNumber1 = 10;
+	iNumber2 = 0;
+
+	printf("The 1 is TURE, 0 is FALSE\n");
+	printf("5 <  iNumber1 && iNumber2 is %d\n", 5 < iNumber1&&iNumber2);
+	printf("5 <  iNumber1 || iNumber2 is %d\n", 5 < iNumber1||iNumber2);
+	iNumber1 = !!iNumber2;
+	printf("iNumber2 is %d\n", iNumber2);
 
 	system("pause");
 	return 0;
