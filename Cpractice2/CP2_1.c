@@ -4,8 +4,10 @@ int main()
 	/*UseExpr();
 	UseOperator();
 	ConvertType();
-	DoConvert();*/
+	DoConvert();
 	CalOper();
+	CalcuLevel();*/
+	SelfOper();
 }
 
 int UseExpr()
@@ -93,6 +95,66 @@ int CalOper()
 	printf("%d\n", iCelsius);
 	printf("degrees in Celsius\n");
 	
+	system("pause");
+	return 0;
+}
+
+int CalcuLevel()
+{
+	int iNumber1, iNumber2, INumber3, iResult;
+	iNumber1 = 20;
+	iNumber2 = 5;
+	INumber3 = 2;
+
+	iResult = iNumber1 + iNumber2 + INumber3;
+	printf("The result is: %d\n", iResult);
+
+	iResult = iNumber1 - iNumber2 + INumber3;
+	printf("The result is: %d\n", iResult);
+
+	iResult = iNumber1 + iNumber2 * INumber3;
+	printf("The result is: %d\n", iResult);
+
+	iResult = iNumber1 / iNumber2 * INumber3;
+	printf("The result is: %d\n", iResult);
+
+	iResult = (iNumber1 + iNumber2) + INumber3;
+	printf("The result is: %d\n", iResult);
+
+	system("pause");
+	return 0;
+
+}
+
+int SelfOper()
+{
+	int iNumber1 = 3;
+	int iNumber2 = 3;
+	int iResultPreAdd, iResultLastAdd;
+	int iResultPreDel, iResultLastDel;
+
+	iResultPreAdd = ++iNumber1;
+	iResultLastAdd = iNumber2++;
+
+	printf("#--------Self Add--------#\n");
+	printf("The Addself ...\n");
+	printf("The iNumber1 is : %d\n", iNumber1);
+	printf("The iResultPreA is: %d\n", iResultPreAdd);
+	printf("The iNumber2 is: %d\n", iNumber2);
+	printf("The iResultLastA is: %d\n\n", iResultLastAdd);
+
+	iNumber1 = 3;
+	iNumber2 = 3;
+	iResultPreDel = --iNumber1;
+	iResultLastDel = iNumber2--;
+
+	printf("#--------Self Delete--------#\n");
+	printf("The Deleteself ...\n");
+	printf("The iNumber1 is: %d\n", iNumber1);
+	printf("The iResultPreDel is: %d\n", iResultPreDel);
+	printf("The iNumber2 is: %d\n", iNumber2);
+	printf("The iResultLastDel is: %d\n", iResultLastDel);
+
 	system("pause");
 	return 0;
 }
