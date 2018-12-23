@@ -1,8 +1,10 @@
 ﻿#include <stdio.h>
 int main()
 {
-	/*UseExpr();*/
+	/*UseExpr();
 	UseOperator();
+	ConvertType();*/
+	DoConvert();
 }
 
 int UseExpr()
@@ -38,6 +40,42 @@ int UseOperator()
 	printf("The HoursWorded is: %d\n", iHoursWorded);
 	printf("The HourlyRate is: %d\n", iHourlyRate);
 	printf("The GrossPay is: %d\n", iGrossPay);
+
+	system("pause");
+	return 0;
+}
+
+int ConvertType()
+{
+	printf("#--------自动类型转换--------#\n");
+	float i = 10.1f;
+	printf("浮点: %f\n", i);
+	int j = i;
+	printf("整数: %d\n", j);
+	printf("#--------强制类型转换--------#\n");
+	float m = 11.1f;
+	printf("浮点: %f\n", m);
+	int n = (int)m;
+	printf("整数: %d\n", n);
+	system("pause");
+	return 0;
+}
+
+int DoConvert()
+{
+	char cChar;
+	short iShort;
+	int iInt;
+	float fFloat = 70000;
+
+	cChar = (char)fFloat;
+	iShort = (short)fFloat;
+	iInt = (int)fFloat;
+
+	printf("The char is: %c\n", cChar);
+	printf("The long is: %ld\n", iShort);
+	printf("The int is: %d\n", iInt);
+	printf("The float is: %f\n", fFloat);
 
 	system("pause");
 	return 0;
