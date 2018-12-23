@@ -3,8 +3,9 @@ int main()
 {
 	/*UseExpr();
 	UseOperator();
-	ConvertType();*/
-	DoConvert();
+	ConvertType();
+	DoConvert();*/
+	CalOper();
 }
 
 int UseExpr()
@@ -77,6 +78,21 @@ int DoConvert()
 	printf("The int is: %d\n", iInt);
 	printf("The float is: %f\n", fFloat);
 
+	system("pause");
+	return 0;
+}
+
+int CalOper()
+{
+	int iCelsius, iFahrenhelt;
+	printf("Please enter temperature in Fahrenhelt: \n");
+	scanf_s("%d", &iFahrenhelt);
+	iCelsius = 5 * (iFahrenhelt - 32) / 9;
+
+	printf("Temperature is: ");
+	printf("%d\n", iCelsius);
+	printf("degrees in Celsius\n");
+	
 	system("pause");
 	return 0;
 }
