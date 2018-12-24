@@ -8,8 +8,9 @@ int main()
 	CalOper();
 	CalcuLevel();
 	SelfOper();
-	RelationOper();*/
+	RelationOper();
 	LogicOperD();
+	UseComma();*/
 }
 
 int UseExpr()
@@ -199,6 +200,25 @@ int LogicOperD()
 	printf("5 <  iNumber1 || iNumber2 is %d\n", 5 < iNumber1||iNumber2);
 	iNumber1 = !!iNumber2;
 	printf("iNumber2 is %d\n", iNumber2);
+
+	system("pause");
+	return 0;
+}
+
+int UseComma()
+{
+	int iValue1, iValue2, iValue3, iResult;
+
+	iValue1 = 10;
+	iValue2 = 43;
+	iValue3 = 26;
+	iResult = 0;
+
+	iResult = iValue1++, --iValue2, iValue3 + 4; /*没有使用括号, 由于计算的优先性，得到iValue1的值(10), 随后iValue1进行自加*/
+	printf("The result is: %d\n", iResult);
+
+	iResult = (iValue1++, --iValue2, iValue3 + 4); /*使用了括号, 同时由于计算优先性, 因此得到iValue3运算后的值(26+4)*/
+	printf("The result is: %d\n",iResult);
 
 	system("pause");
 	return 0;
