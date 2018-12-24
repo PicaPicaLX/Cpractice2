@@ -10,7 +10,8 @@ int main()
 	SelfOper();
 	RelationOper();
 	LogicOperD();
-	UseComma();*/
+	UseComma();
+	CompGive();*/
 }
 
 int UseExpr()
@@ -219,6 +220,22 @@ int UseComma()
 
 	iResult = (iValue1++, --iValue2, iValue3 + 4); /*使用了括号, 同时由于计算优先性, 因此得到iValue3运算后的值(26+4)*/
 	printf("The result is: %d\n",iResult);
+
+	system("pause");
+	return 0;
+}
+
+int CompGive()
+{
+	int iTotal, iValue, iDetail;
+	iTotal = 100;
+	iValue = 50;
+	iDetail = 5;
+
+	iValue *= iDetail;
+	iTotal += iValue;
+	printf("Value is: %d\n", iValue);
+	printf("Total is: %d\n", iTotal);
 
 	system("pause");
 	return 0;
